@@ -134,11 +134,11 @@ export default function ReachOut({ showScrollUp = true }: { showScrollUp?: boole
 
       {/* Email Client Selection Modal */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm animate-in fade-in duration-200"
           onClick={() => setIsOpen(false)}
         >
-          <div 
+          <div
             className="bg-[#0c0c0c] border border-[#161616] rounded-xl p-5 max-w-xs w-full mx-4 shadow-2xl relative flex flex-col gap-4 animate-in zoom-in-95 duration-200 text-left"
             onClick={(e) => e.stopPropagation()}
           >
@@ -147,7 +147,7 @@ export default function ReachOut({ showScrollUp = true }: { showScrollUp?: boole
               <h4 className="text-xs font-bold text-white font-sans uppercase tracking-wider">
                 Send Email
               </h4>
-              <button 
+              <button
                 onClick={() => setIsOpen(false)}
                 className="text-zinc-500 hover:text-white w-6 h-6 flex items-center justify-center rounded-full hover:bg-zinc-900 transition-colors cursor-pointer"
               >

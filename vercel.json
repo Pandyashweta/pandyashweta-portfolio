@@ -6,7 +6,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cal.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://cal.com https://leetcard.jacoblin.cool https://images.unsplash.com https://assets.cal.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://api.github.com https://cal.com https://leetcard.jacoblin.cool; frame-src 'self' https://cal.com; object-src 'none';"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cal.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://cal.com https://leetcard.jacoblin.cool https://images.unsplash.com https://assets.cal.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://api.github.com https://cal.com https://leetcard.jacoblin.cool https://github-contributions-api.deno.dev https://github-contributions.vercel.app; frame-src 'self' https://cal.com; object-src 'none';"
         },
         {
           "key": "Strict-Transport-Security",

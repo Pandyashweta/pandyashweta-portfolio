@@ -1,5 +1,5 @@
-import { showcaseProjects } from "../../data/projects";
-import ProjectCard from "../ui/ProjectCard";
+import { showcaseProjects } from "../../../data/projects";
+import ProjectCard from "../../../components/common/ProjectCard";
 
 export default function Showcase() {
   const getCardLink = (projectId: string) => {

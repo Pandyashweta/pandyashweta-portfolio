@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
-import type { LayoutContext } from "../components/layout/Layout";
-import { codingProjects, figmaProjects, liveProjects, researchProjects } from "../data/projects";
-import GithubContributions from "../components/sections/GithubContributions";
-import ProjectCard from "../components/ui/ProjectCard";
+import type { LayoutContext } from "../../components/layout/Layout";
+import { codingProjects, figmaProjects, liveProjects, researchProjects } from "../../data/projects";
+import ProjectCard from "../../components/common/ProjectCard";
+import ReachOut from "../../components/common/ReachOut";
 import { RotateCw, ArrowLeft } from "lucide-react";
-import ReachOut from "../components/sections/ReachOut";
+import GithubContributions from "./components/GithubContributions";
 
 export default function ProjectsPage() {
   const navigate = useNavigate();

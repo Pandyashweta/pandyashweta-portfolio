@@ -1,7 +1,7 @@
 import { useOutletContext } from "react-router-dom";
-import type { LayoutContext } from "../components/layout/Layout";
-import Hero from "../components/sections/Hero";
-import Showcase from "../components/sections/Showcase";
+import type { LayoutContext } from "../../components/layout/Layout";
+import Hero from "./components/Hero";
+import Showcase from "./components/Showcase";
 
 export default function HomePage() {
   const { leftColRef, rightColRef, handleScroll } = useOutletContext<LayoutContext>();
