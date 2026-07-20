@@ -60,75 +60,56 @@ export default function ReachOut({ showScrollUp = true }: { showScrollUp?: boole
   };
 
   return (
-    <div id="reach-out" className="space-y-4 scroll-mt-6">
-      <h3 className="text-[13px] sm:text-sm font-bold text-[#888888] font-sans uppercase tracking-wider">
-        Reach out.
-      </h3>
-
-      <div className="flex flex-col gap-4">
-        <div className="flex flex-col gap-1.5">
-          <p className="text-[#888888] text-xs sm:text-[13px] font-normal leading-relaxed font-sans">
-            Let's get some work done.
-          </p>
-          <div>
-            <button
-              onClick={() => setIsOpen(true)}
-              className="inline-block text-white text-xs sm:text-[13px] font-sans hover:text-white/80 transition-colors border-b border-[#333] hover:border-white pb-0.5 cursor-pointer bg-transparent border-0 outline-none text-left"
-            >
-              {email}
-            </button>
-          </div>
-        </div>
-
-        <div className="flex justify-between items-center pt-2 w-full">
-          <div className="flex gap-4 text-[11px] font-mono text-[#555555] items-center">
-            <a
-              href="https://www.linkedin.com/in/pandyashweta/"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5"
-            >
-              LinkedIn
-            </a>
-            <span>•</span>
-            <a
-              href="https://github.com/Pandyashweta"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5"
-            >
-              GitHub
-            </a>
-            <span>•</span>
-            <a
-              href="https://www.figma.com/@pandyashweta"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5"
-            >
-              Figma
-            </a>
-            <span>•</span>
-            <a
-              href="https://drive.google.com/file/d/1BLmGQaZA0cyL2yPhi6-PMjQG0BdnWmfI/view?usp=sharing"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5"
-            >
-              Resume
-            </a>
-          </div>
-
-          {showScrollUp && (
-            <button
-              onClick={scrollToTop}
-              className="p-2 rounded-full bg-[#121212] hover:bg-[#1a1a1a] border border-[#222] text-[#888888] hover:text-white transition-all active:scale-95 cursor-pointer flex items-center justify-center group"
-              aria-label="Scroll to top"
-              title="Scroll to top"
-            >
-              <ArrowUp className="w-3.5 h-3.5 text-[#888888] group-hover:text-white transition-colors" strokeWidth={2.5} />
-            </button>
-          )}
+    <div id="reach-out" className="scroll-mt-6">
+      <div className="flex justify-between items-center w-full">
+        <div className="flex flex-wrap gap-x-4 gap-y-2 text-[11px] font-mono text-[#555555] items-center">
+          <a
+            href="https://www.linkedin.com/in/pandyashweta/"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5"
+          >
+            LinkedIn
+          </a>
+          <span>•</span>
+          <a
+            href="https://github.com/Pandyashweta"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5"
+          >
+            GitHub
+          </a>
+          <span>•</span>
+          <a
+            href="https://www.figma.com/@pandyashweta"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5"
+          >
+            Figma
+          </a>
+          <span>•</span>
+          <a
+            href="/not-found"
+            className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5"
+          >
+            Resume
+          </a>
+          <span>•</span>
+          <button
+            onClick={() => setIsOpen(true)}
+            className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5 cursor-pointer bg-transparent border-0 p-0 outline-none text-left font-mono text-[11px] text-[#555555]"
+          >
+            Email
+          </button>
+          <span>•</span>
+          <a
+            href="/projects#certifications"
+            className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5"
+          >
+            Certification
+          </a>
         </div>
       </div>
 

@@ -31,50 +31,9 @@ EAU DE PERFUME is a luxury fragrance e-commerce concept designed to deliver a pr
 
 ---
 
-## My Role
-
-* UX Research
-* User Flow Design
-* Information Architecture
-* Wireframing
-* UI Design
-* Design System
-* Responsive Web Design
-* Interactive Prototyping
-
----
-
-## Key Features
-
-* Luxury Product Catalog
-* Product Detail Experience
-* Wishlist Management
-* Secure Authentication
-* Google Sign-In Integration
-* Shopping Cart & Checkout
-* Order Confirmation Flow
-* Premium Error & Success States
-* Newsletter Subscription
-* Responsive Landing Page
-
----
-
-## Design Process
-
-Research → User Journey Mapping → Information Architecture → Wireframes → High-Fidelity UI → Interactive Prototype → Visual Refinement
-
----
-
 ## Outcome
 
-EAU DE PERFUME delivers a refined luxury shopping experience through elegant visual design, intuitive navigation, and frictionless purchasing flows. The project demonstrates how thoughtful UX and premium aesthetics can elevate an online retail experience while maintaining usability and accessibility.
-
----
-
-## Project Resources
-
-**Figma Design** - [Link](https://www.figma.com/community/file/1653804240648155757/eau-de-parfum)
-Explore the complete collection of high-fidelity screens, reusable components, responsive layouts, and interactive prototypes.`,
+EAU DE PERFUME delivers a refined luxury shopping experience through elegant visual design, intuitive navigation, and frictionless purchasing flows. The project demonstrates how thoughtful UX and premium aesthetics can elevate an online retail experience while maintaining usability and accessibility.`,
     images: [
       perfumeThumbnail,
       perfumeLogin,
@@ -95,55 +54,18 @@ Explore the complete collection of high-fidelity screens, reusable components, r
     scope: "Figma Community | UI/UX Design | High-fidelity Mockups | Interactive Prototyping",
     client: "MSc. IT student project",
     duration: "3 Weeks",
+    url: "https://www.figma.com/community/file/1632092961246977062",
     aboutText: `## Project Overview
 
-Histopedia is a UI/UX concept that reimagines how users discover and explore world history through an interactive, visually engaging digital platform. It combines curated historical content, map-based exploration, and community contributions to make learning history more accessible, immersive, and enjoyable.
+This is one of my favorite projects from my master's degree. For this project, I turned one of my hobbies, which is my love of history, into a small UI/UX app project. Because I wish there was an app like this when I was looking for history apps, I plan to make it available to the public when I am finished improving it.
 
----
-
-## My Role
-
-* UX Research
-* User Personas
-* Information Architecture
-* Wireframing
-* UI Design
-* Design System
-* Interactive Prototyping
-
----
-
-## Key Features
-
-* Interactive historical feed
-* Map-based heritage exploration
-* Community discussions & contributions
-* Personalized recommendations
-* Historical detail pages
-* Secure authentication
-* Premium subscription experience
-
----
-
-## Design Process
-
-Research → Personas → Information Architecture → Wireframes → High-Fidelity UI → Interactive Prototype → Usability Improvements
+Histopedia is my concept of a UI/UX app. It allows customers to search for any map of world history and then choose historical events based on the map they want to interact with and learn about. Users will also be able to learn about the historical events that other users have documented and will be able to contribute to the app by documenting historical events themselves.
 
 ---
 
 ## Outcome
 
-Histopedia transforms traditional historical archives into a modern, user-friendly experience that encourages exploration, learning, and community engagement while preserving cultural heritage.
-
----
-
-## Project Resources
-
-**UX Report** - [Link](https://drive.google.com/drive/folders/1ocO14HdTun2shwa4dG2cUDbSPzOC-0CV?usp=sharing)
-Explore the complete design process, research, usability analysis, and project documentation.
-
-**User Personas** - [Link](https://drive.google.com/drive/folders/1A_f9C8wQVJR_1GuMOKtLFtyQ-mTScpCC?usp=sharing)
-View the research-driven personas that shaped key product decisions.`,
+Histopedia an appp  that transforms traditional historical archives into a modern, user-friendly experience that encourages exploration, learning, and community engagement while preserving cultural heritage.`,
     images: [
       histopediaThumbnail,
       histopediaWelcome,
@@ -151,6 +73,18 @@ View the research-driven personas that shaped key product decisions.`,
       histopediaCommunity,
       histopediaSearch,
       histopediaProfile
+    ],
+    resources: [
+      {
+        label: "UX Report",
+        url: "https://drive.google.com/drive/folders/1ocO14HdTun2shwa4dG2cUDbSPzOC-0CV?usp=sharing",
+        description: "Explore the complete design process, research, usability analysis, and project documentation."
+      },
+      {
+        label: "User Personas",
+        url: "https://drive.google.com/drive/folders/1A_f9C8wQVJR_1GuMOKtLFtyQ-mTScpCC?usp=sharing",
+        description: "View the research-driven personas that shaped key product decisions."
+      }
     ],
   },
 ];

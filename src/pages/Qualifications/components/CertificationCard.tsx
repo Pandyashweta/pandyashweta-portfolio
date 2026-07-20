@@ -8,7 +8,7 @@ export default function CertificationCard({ cert }: { cert: Certification; key?:
   return (
     <>
       <div
-        className="relative group rounded-[20px] border border-[#161616] bg-[#0c0c0c] overflow-hidden aspect-square hover:border-[#222] transition-all duration-300 cursor-pointer"
+        className="relative group rounded-none border border-[#161616] bg-[#0c0c0c] overflow-hidden aspect-square hover:border-[#222] transition-all duration-300 cursor-pointer"
         onClick={() => setIsModalOpen(true)}
       >
         {/* Background Image */}
@@ -20,17 +20,17 @@ export default function CertificationCard({ cert }: { cert: Certification; key?:
         />
 
         {/* Text Overlay (Gradient bottom) */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-4 text-left font-sans">
-          <span className="text-zinc-500 text-[9px] font-mono tracking-widest uppercase mb-1">
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-3 text-left font-sans">
+          <span className="text-zinc-500 text-[8px] font-mono tracking-widest uppercase mb-0.5">
             {cert.year}
           </span>
-          <h4 className="font-semibold text-white text-xs sm:text-[13.5px] leading-tight group-hover:text-emerald-400 transition-colors line-clamp-2">
+          <h4 className="font-semibold text-white text-[11px] sm:text-xs leading-tight group-hover:text-emerald-400 transition-colors line-clamp-2">
             {cert.title}
           </h4>
-          <div className="flex justify-between items-center text-[10px] text-zinc-400 mt-1.5 min-w-0">
+          <div className="flex justify-between items-center text-[9px] text-zinc-400 mt-1 min-w-0">
             <span className="truncate pr-2">{cert.issuer}</span>
             {cert.issueNumber && (
-              <span className="text-zinc-500 font-mono text-[9px] shrink-0">
+              <span className="text-zinc-500 font-mono text-[8px] shrink-0">
                 {cert.issueNumber}
               </span>
             )}
@@ -58,13 +58,13 @@ export default function CertificationCard({ cert }: { cert: Certification; key?:
               <X className="w-4 h-4" />
             </button>
 
-            {/* Card Container */}
-            <div className="bg-[#0c0c0c] border border-[#1a1a1a] rounded-[24px] p-6 w-full relative overflow-hidden shadow-2xl shadow-black/80 flex flex-col gap-4">
+             {/* Card Container */}
+            <div className="bg-[#0c0c0c] border border-[#1a1a1a] rounded-none p-6 w-full relative overflow-hidden shadow-2xl shadow-black/80 flex flex-col gap-4">
               {/* Glowing Accent Effect */}
               <div className="absolute -top-16 -right-16 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />
 
               {/* Top: Image Preview */}
-              <div className="relative group/cert w-full aspect-[16/10] rounded-xl overflow-hidden bg-zinc-950 border border-zinc-800/80 mt-1 shadow-inner z-10">
+              <div className="relative group/cert w-full aspect-[16/10] rounded-none overflow-hidden bg-zinc-950 border border-zinc-800/80 mt-1 shadow-inner z-10">
                 <img
                   src={cert.image}
                   alt={cert.title}
@@ -92,7 +92,7 @@ export default function CertificationCard({ cert }: { cert: Certification; key?:
 
                 <div className="flex flex-wrap gap-2 items-center">
                   {cert.issueNumber && (
-                    <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-[#121212] border border-[#1a1a1a] text-[9.5px] text-zinc-500 font-mono">
+                    <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-none bg-[#121212] border border-[#1a1a1a] text-[9.5px] text-zinc-500 font-mono">
                       <span>{cert.issueNumber.includes("Grade") ? "Grade:" : "ID:"} {cert.issueNumber.replace(/Grade\s*|\s*ID:\s*/g, "")}</span>
                     </div>
                   )}
@@ -109,7 +109,7 @@ export default function CertificationCard({ cert }: { cert: Certification; key?:
                   href={cert.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-1.5 w-full bg-white text-black hover:bg-[#e5e5e5] border border-transparent font-sans text-xs font-bold py-3 px-4 rounded-xl transition-all duration-300 active:scale-[0.98] shadow-lg shadow-black/20 cursor-pointer mt-1 z-10"
+                  className="inline-flex items-center justify-center gap-1.5 w-full bg-white text-black hover:bg-[#e5e5e5] border border-transparent font-sans text-xs font-bold py-3 px-4 rounded-none transition-all duration-300 active:scale-[0.98] shadow-lg shadow-black/20 cursor-pointer mt-1 z-10"
                 >
                   <span>Verify Credential</span>
                   <ExternalLink className="w-3.5 h-3.5" />

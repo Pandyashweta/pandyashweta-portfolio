@@ -30,10 +30,9 @@ export const certifications: Certification[] = [
     title: "C Programming Certification",
     issuer: "All India Institute of Computer Education (AIICE)",
     year: "Sep 2024",
-    issueNumber: "Grade A+",
     link: "http://www.aiice.org/",
     image: certCProgramming,
-    description: "Successfully completed a certified C Programming course with an A+ grade, building a strong foundation in programming concepts, data types, control structures, and problem-solving."
+    description: "Successfully completed a certified C Programming course, building a strong foundation in programming concepts, data types, control structures, and problem-solving."
   },
   {
     id: "aws-cloud",

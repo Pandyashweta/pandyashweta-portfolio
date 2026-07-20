@@ -1,6 +1,5 @@
 import projectsThumbnailNew from "../../assets/images/projects.webp";
 import illustrationsThumbnailNew from "../../assets/images/illustrations.webp";
-import qualificationsThumbnailNew from "../../assets/images/qualifications.webp";
 import type { ProjectData } from "../../types";
 import { artImages, doodleImages, fashionImages, godImages } from "./pencilArtImages";
 
@@ -10,7 +9,7 @@ export const showcaseProjects: ProjectData[] = [
     title: "Projects",
     category: "Software Development",
     image: projectsThumbnailNew,
-    spanClass: "md:row-span-2 md:col-span-1",
+    spanClass: "col-span-1",
     aspectClass: "aspect-[3/4] md:aspect-auto md:h-full",
   },
   {
@@ -132,13 +131,5 @@ export const showcaseProjects: ProjectData[] = [
         ],
       },
     ],
-  },
-  {
-    id: "qualifications",
-    title: "Qualifications",
-    category: "Credentials & Skills",
-    image: qualificationsThumbnailNew,
-    spanClass: "col-span-1",
-    aspectClass: "aspect-[16/10] md:aspect-auto md:h-full",
   },
 ];

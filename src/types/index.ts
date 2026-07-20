@@ -15,6 +15,11 @@ export interface ProjectData {
   duration?: string;
   aboutText?: string;
   images?: string[];
+  resources?: {
+    label: string;
+    url: string;
+    description?: string;
+  }[];
   pencilCategories?: {
     id: string;
     name: string;

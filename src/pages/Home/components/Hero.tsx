@@ -1,5 +1,4 @@
 import React from "react";
-import { ArrowUpRight } from "lucide-react";
 import { brandLogos } from "../../../data/projects";
 import ReachOut from "../../../components/common/ReachOut";
 import AboutMe from "./AboutMe";
@@ -10,42 +9,17 @@ export default function Hero() {
       {/* Header Block */}
       <div className="space-y-2">
         <h1 className="text-3xl sm:text-[38px] font-semibold tracking-tight text-white leading-none font-sans">
-          Pandya Shweta
+          Shweta Pandya
         </h1>
-        <p className="text-[#777777] text-xs sm:text-xs font-mono tracking-widest uppercase">
-          Multidisciplinary Builder
+        <p className="text-[#777777] text-[10px] sm:text-[11px] font-mono tracking-wide uppercase">
+          Software Engineer • Research & Development
         </p>
       </div>
 
-      {/* Hero Core Statement */}
-      <div>
-        <p className="text-base sm:text-[17px] font-normal text-[#d4d4d8] tracking-tight leading-relaxed font-sans">
-          Multidisciplinary problem solver with hands-on experience at the intersection of technology, design, and operations, driven by curiosity and a commitment to continuous improvement.
-        </p>
-      </div>
+      {/* Divider */}
+      <div className="h-px bg-[#161616] w-full" />
 
-      {/* Button block */}
-      <div className="flex items-center gap-2.5 flex-wrap">
-        <a
-          href="https://cal.com/pandyashweta/15min?overlayCalendar=true"
-          target="_blank"
-          rel="noreferrer"
-          data-cal-link="pandyashweta/15min"
-          data-cal-config='{"layout":"month_view"}'
-          className="inline-flex items-center gap-1.5 bg-white text-black hover:bg-[#e5e5e5] active:scale-98 font-semibold font-sans text-xs px-5 py-2.5 rounded-full transition-all shadow-md shadow-black/20 cursor-pointer"
-        >
-          Connect
-          <ArrowUpRight className="w-3.5 h-3.5 text-black" strokeWidth={2.5} />
-        </a>
-
-        <div className="inline-flex items-center gap-2 bg-[#121212] border border-[#222] text-[#888888] font-medium font-sans text-[11px] px-4 py-2.5 rounded-full select-none">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-          </span>
-          Available for work
-        </div>
-      </div>
+      <AboutMe />
 
       {/* Brand Marks Marquee Section */}
       <div className="space-y-2 py-0.5">
@@ -73,11 +47,6 @@ export default function Hero() {
 
         <div className="h-px bg-[#161616] w-full" />
       </div>
-
-      <AboutMe />
-
-      {/* Divider */}
-      <div className="h-px bg-[#161616] w-full" />
 
       <ReachOut showScrollUp={false} />
     </div>

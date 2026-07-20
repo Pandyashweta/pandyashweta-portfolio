@@ -48,6 +48,8 @@ html {
     overflow-x: hidden;
     scrollbar-width: none; /* Hide for Firefox */
     -ms-overflow-style: none; /* Hide for IE/Edge */
+    will-change: scroll-position;
+    -webkit-overflow-scrolling: touch;
   }
   .subtle-scrollbar-left > * {
     direction: ltr; /* Keeps content direction left-to-right */
@@ -65,6 +67,8 @@ html {
     overflow-x: hidden;
     scrollbar-width: none; /* Hide for Firefox */
     -ms-overflow-style: none; /* Hide for IE/Edge */
+    will-change: scroll-position;
+    -webkit-overflow-scrolling: touch;
   }
   .subtle-scrollbar-right::-webkit-scrollbar {
     display: none; /* Hide for Chrome, Safari, and Opera */
@@ -118,5 +122,25 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.15);
 }
+
+/* Accordion transition styles for smooth auto-height animation */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.accordion-content.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  visibility: visible;
+}
+
+.accordion-inner {
+  overflow: hidden;
+}
+
 
 

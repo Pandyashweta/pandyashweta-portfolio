@@ -55,16 +55,15 @@ async function runPrerender() {
 
     // 4. Define static routes to render
     const routes = [
-      { url: '/', title: 'Pandya Shweta | Portfolio', desc: 'Website developed by Shweta to showcase her projects and qualifications.' },
-      { url: '/projects', title: 'Projects | Pandya Shweta', desc: 'Explore a collection of software development, UI/UX design, and research projects by Pandya Shweta.' },
-      { url: '/qualifications', title: 'Qualifications & Credentials | Pandya Shweta', desc: 'Review the educational background, certifications, and technical skills of Pandya Shweta.' }
+      { url: '/', title: 'Shweta Pandya | Portfolio', desc: 'Website developed by Shweta to showcase her software development projects and digital illustrations.' },
+      { url: '/projects', title: 'Projects | Shweta Pandya', desc: 'Explore a collection of software development, UI/UX design, and research projects by Shweta Pandya.' }
     ];
 
     // Add dynamic project detail routes
     activeProjectIds.forEach(id => {
       const proj = projectList.find(p => p.id === id);
       if (proj) {
-        const title = `${proj.title} | Projects | Pandya Shweta`;
+        const title = `${proj.title} | Projects | Shweta Pandya`;
         const desc = proj.description || (proj.aboutText ? proj.aboutText.slice(0, 160) : 'Detailed project review and showcase.');
         routes.push({
           url: `/projects/${id}`,
@@ -89,7 +88,7 @@ async function runPrerender() {
           "@type": "ProfilePage",
           "mainEntity": {
             "@type": "Person",
-            "name": "Pandya Shweta",
+            "name": "Shweta Pandya",
             "jobTitle": "Multidisciplinary Builder & Software Engineer",
             "description": "Multidisciplinary problem solver with hands-on experience at the intersection of technology, design, and operations.",
             "url": "https://pandyashweta.in",
@@ -111,7 +110,7 @@ async function runPrerender() {
           "url": `https://pandyashweta.in/projects/${proj.id}`,
           "creator": {
             "@type": "Person",
-            "name": "Pandya Shweta"
+            "name": "Shweta Pandya"
           },
           "dateCreated": proj.year || "2025"
         };

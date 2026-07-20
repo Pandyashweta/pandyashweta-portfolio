@@ -37,21 +37,24 @@ export default function StandardView({ project, leftColRef, rightColRef, handleS
         className="h-auto lg:h-full lg:min-h-0 subtle-scrollbar-left flex flex-col relative"
       >
         {/* Sticky Header: Contains Title and Back Button */}
-        <div className="sticky top-0 bg-[#080808]/95 backdrop-blur-sm z-20 pl-6 pr-3 pt-5 pb-4 flex flex-col items-start gap-3">
-          <button
-            onClick={() => navigate(-1)}
-            className="inline-flex items-center gap-1.5 bg-white text-black hover:bg-[#e5e5e5] active:scale-95 font-semibold font-sans text-xs px-4 py-2 rounded-full transition-all shadow-md shadow-black/20 cursor-pointer"
-          >
-            <ArrowLeft className="w-3.5 h-3.5 text-black" strokeWidth={2.5} />
-            Back
-          </button>
-          <h1 className="text-3xl sm:text-[38px] font-semibold tracking-tight text-white leading-tight font-sans">
-            {project.title}
-          </h1>
+        <div className="sticky top-0 bg-[#080808]/95 backdrop-blur-sm z-20 pt-5 pb-0 flex flex-col gap-3">
+          <div className="pl-6 pr-3 flex flex-row items-center justify-between gap-3">
+            <h1 className="text-3xl sm:text-[38px] font-semibold tracking-tight text-white leading-tight font-sans">
+              {project.title}
+            </h1>
+            <button
+              onClick={() => navigate(-1)}
+              className="inline-flex items-center gap-1.5 bg-white text-black hover:bg-[#e5e5e5] active:scale-95 font-semibold font-sans text-xs px-4 py-2 rounded-full transition-all shadow-md shadow-black/20 cursor-pointer shrink-0"
+            >
+              <ArrowLeft className="w-3.5 h-3.5 text-black" strokeWidth={2.5} />
+              Back
+            </button>
+          </div>
+          <div className="h-px bg-[#161616] ml-6 mr-3" />
         </div>
 
         {/* Scrollable Content Container */}
-        <div className="pl-6 pr-3 pt-6 pb-6 flex flex-col gap-6">
+        <div className="pl-6 pr-3 pt-4 pb-6 flex flex-col gap-6">
           {/* Metadata Section */}
           <div className="space-y-4 text-xs font-sans text-[#888888]">
             <div className="flex gap-4 items-start">
@@ -84,15 +87,36 @@ export default function StandardView({ project, leftColRef, rightColRef, handleS
                 </a>
               </div>
             )}
+
+            {project.resources && project.resources.length > 0 && (
+              <div className="pt-2 flex flex-col gap-3">
+                <div className="h-px bg-[#161616] w-full" />
+                <div className="flex flex-col gap-3">
+                  {project.resources.map((res, index) => (
+                    <div key={index} className="flex flex-col gap-1.5">
+                      <a
+                        href={res.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 text-zinc-200 hover:text-white transition-colors border-b border-[#333] hover:border-white pb-0.5 self-start text-xs font-normal font-sans"
+                      >
+                        <span>{res.label}</span>
+                        <ExternalLink className="w-3.5 h-3.5 text-[#555] ml-1 shrink-0" />
+                      </a>
+                      {res.description && (
+                        <span className="text-xs text-[#888888] font-sans block leading-relaxed">{res.description}</span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
-          <div className="h-px bg-[#161616] w-full" />
+          <div className="h-px bg-[#161616] w-full -mt-3 -mb-3" />
 
           {/* Detailed About Section */}
           <div className="space-y-4">
-            <h3 className="text-[13px] sm:text-sm font-bold text-[#888888] font-sans uppercase tracking-wider">
-              About the project
-            </h3>
             {parseMarkdown(displayAbout)}
           </div>
 
@@ -128,7 +152,8 @@ export default function StandardView({ project, leftColRef, rightColRef, handleS
                   src={imgSrc}
                   alt={`${project.title} - ${caption}`}
                   className="w-full h-auto object-cover block"
-                  loading="lazy"
+                  loading="eager"
+                  decoding="async"
                 />
 
                 {/* Hover Overlay */}
