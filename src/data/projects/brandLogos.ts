@@ -4,6 +4,6 @@ export const brandLogos = [
   { name: "OPERATIONS", desc: "Workflows & E-commerce Operations" },
   { name: "ANALYSIS", desc: "Data & Process Discovery" },
   { name: "RESEARCH", desc: "Scientific Research & Problem Solving" },
-  { name: "DESIGN", desc: "UI/UX & Digital Illustration" },
+  { name: "DESIGN", desc: "UI/UX Design" },
 ];
 

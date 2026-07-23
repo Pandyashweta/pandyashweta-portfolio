@@ -55,7 +55,7 @@ export default function ProjectCard({
     </>
   );
 
-  const containerClasses = `relative rounded-xl overflow-hidden group border border-[#161616] bg-[#0c0c0c] flex flex-col h-full w-full transition-[transform,border-color] duration-500 ease-out hover:scale-[1.008] hover:border-[#262626] will-change-transform ${project.spanClass || ""} ${(isLink || onClick) ? "cursor-pointer" : ""}`;
+  const containerClasses = `relative rounded-[5px] overflow-hidden group border border-[var(--border-color)] bg-[var(--bg-card)] flex flex-col h-full w-full transition-[transform,border-color,background-color] duration-500 ease-out hover:scale-[1.008] hover:border-[var(--border-hover)] will-change-transform ${project.spanClass || ""} ${(isLink || onClick) ? "cursor-pointer" : ""}`;
 
   if (to) {
     return (

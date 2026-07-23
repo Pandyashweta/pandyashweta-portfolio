@@ -14,9 +14,47 @@
   --font-mono: "Geist Mono", monospace;
 }
 
+:root {
+  /* Default: Black (Dark Mode) */
+  --bg-primary: #000000;
+  --bg-card: #080808;
+  --border-color: #161616;
+  --border-hover: #262626;
+  --text-primary: #ffffff;
+  --text-secondary: #888888;
+  --text-muted: #555555;
+  --marquee-fade: #000000;
+  --selection-bg: rgba(244, 63, 94, 0.2);
+  --selection-text: #fca5a5;
+  --btn-bg: #1a1a1a;
+  --btn-hover: #242424;
+  --btn-text: #ffffff;
+  --btn-border: #2d2d2d;
+}
+
+.theme-white {
+  /* Toggled: White (Light Mode) */
+  --bg-primary: #ffffff;
+  --bg-card: #f8f8fa;
+  --border-color: #e4e4e7;
+  --border-hover: #cbd5e1;
+  --text-primary: #09090b;
+  --text-secondary: #71717a;
+  --text-muted: #a1a1aa;
+  --marquee-fade: #ffffff;
+  --selection-bg: rgba(244, 63, 94, 0.1);
+  --selection-text: #e11d48;
+  --btn-bg: #f4f4f5;
+  --btn-hover: #e4e4e7;
+  --btn-text: #09090b;
+  --btn-border: #e4e4e7;
+}
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
 }
 
 html {

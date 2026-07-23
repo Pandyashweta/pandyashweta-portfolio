@@ -19,9 +19,6 @@ async function runPrerender() {
     const { 
       render, 
       figmaProjects, 
-      codingProjects, 
-      showcaseProjects,
-      liveProjects,
       researchProjects
     } = await import(serverBundleUrl);
 
@@ -34,29 +31,18 @@ async function runPrerender() {
     
     // Add figma detail routes
     figmaProjects.forEach(p => activeProjectIds.add(p.id));
-    // Add coding detail routes
-    codingProjects.forEach(p => activeProjectIds.add(p.id));
-    // Add live detail routes
-    liveProjects.forEach(p => activeProjectIds.add(p.id));
     // Add research detail routes
     researchProjects.forEach(p => activeProjectIds.add(p.id));
-    // Add illustrations if not already present
-    showcaseProjects.forEach(p => {
-      if (p.id === 'illustrations') activeProjectIds.add(p.id);
-    });
 
     const projectList = [
       ...figmaProjects,
-      ...codingProjects,
-      ...showcaseProjects,
-      ...liveProjects,
       ...researchProjects
     ].filter((p, i, self) => self.findIndex(x => x.id === p.id) === i);
 
     // 4. Define static routes to render
     const routes = [
-      { url: '/', title: 'Shweta Pandya | Portfolio', desc: 'Website developed by Shweta to showcase her software development projects and digital illustrations.' },
-      { url: '/projects', title: 'Projects | Shweta Pandya', desc: 'Explore a collection of software development, UI/UX design, and research projects by Shweta Pandya.' }
+      { url: '/', title: 'Shweta Pandya | Portfolio', desc: 'Website developed by Shweta to showcase her software development projects.' },
+      { url: '/projects', title: 'Projects | Shweta Pandya', desc: 'Showcase of Shweta Pandya\'s UI/UX Design and Research projects.' }
     ];
 
     // Add dynamic project detail routes
@@ -101,10 +87,9 @@ async function runPrerender() {
         };
       } else if (route.project) {
         const proj = route.project;
-        const isSoftware = proj.id === 'automation-engine' || proj.id === 'data-imaging';
         schema = {
           "@context": "https://schema.org",
-          "@type": isSoftware ? "SoftwareApplication" : "CreativeWork",
+          "@type": "CreativeWork",
           "name": proj.title,
           "description": proj.description || (proj.aboutText ? proj.aboutText.slice(0, 200) : 'Detailed project showcase'),
           "url": `https://pandyashweta.in/projects/${proj.id}`,
@@ -114,10 +99,6 @@ async function runPrerender() {
           },
           "dateCreated": proj.year || "2025"
         };
-        if (isSoftware) {
-          schema.applicationCategory = "DeveloperApplication";
-          schema.operatingSystem = "All";
-        }
       }
 
       // Format schema script tag

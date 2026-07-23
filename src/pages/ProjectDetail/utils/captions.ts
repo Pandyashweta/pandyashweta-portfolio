@@ -1,9 +1,4 @@
-import { sketchTitles } from "../../../data/projects";
-
 export function getImageCaption(projectId: string, src: string, idx: number): string {
-  if (projectId === "illustrations") {
-    return sketchTitles[src] || "Sketch";
-  }
   const lowerSrc = src.toLowerCase();
 
   // Histopedia captions

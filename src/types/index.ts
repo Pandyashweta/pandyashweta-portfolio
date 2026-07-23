@@ -1,5 +1,3 @@
-import type { ReactNode } from "react";
-
 export interface ProjectData {
   id: string;
   title: string;
@@ -20,22 +18,4 @@ export interface ProjectData {
     url: string;
     description?: string;
   }[];
-  pencilCategories?: {
-    id: string;
-    name: string;
-    images: string[];
-  }[];
-}
-
-export interface TechItem {
-  name: string;
-  logoUrl?: string;
-  icon?: ReactNode;
-  className?: string;
-  url?: string;
-}
-
-export interface TechCategory {
-  title: string;
-  items: TechItem[];
 }

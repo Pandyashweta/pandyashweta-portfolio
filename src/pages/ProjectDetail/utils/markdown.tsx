@@ -5,20 +5,20 @@ export function parseMarkdown(text: string) {
   const blocks = text.split(/\n\n+/);
 
   return (
-    <div className="space-y-4 text-xs sm:text-[13px] font-sans font-normal leading-relaxed text-[#888888]">
+    <div className="space-y-4 text-xs sm:text-[13px] font-sans font-normal leading-relaxed text-[var(--text-secondary)] transition-colors duration-300">
       {blocks.map((block, idx) => {
         const trimmed = block.trim();
         if (!trimmed) return null;
 
         // 1. Horizontal Divider
         if (trimmed === '---') {
-          return <div key={idx} className="h-px bg-[#161616] w-full my-4" />;
+          return <div key={idx} className="h-px bg-[var(--border-color)] w-full my-4 transition-colors duration-300" />;
         }
 
         // 2. Headings (## Heading)
         if (trimmed.startsWith('## ')) {
           return (
-            <h4 key={idx} className="text-xs sm:text-sm font-semibold text-white tracking-tight pt-2 uppercase font-sans">
+            <h4 key={idx} className="text-xs sm:text-sm font-semibold text-[var(--text-primary)] tracking-tight pt-2 uppercase font-sans transition-colors duration-300">
               {trimmed.replace('## ', '')}
             </h4>
           );
@@ -31,7 +31,7 @@ export function parseMarkdown(text: string) {
             return renderRichText(cleanLine);
           });
           return (
-            <ul key={idx} className="list-disc pl-4 space-y-1 text-[#888888]">
+            <ul key={idx} className="list-disc pl-4 space-y-1 text-[var(--text-secondary)] transition-colors duration-300">
               {items.map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
@@ -41,7 +41,7 @@ export function parseMarkdown(text: string) {
 
         // Default: regular paragraph, parse bold and links
         return (
-          <p key={idx} className="text-[#888888] leading-relaxed whitespace-pre-line">
+          <p key={idx} className="text-[var(--text-secondary)] leading-relaxed whitespace-pre-line transition-colors duration-300">
             {renderRichText(trimmed)}
           </p>
         );
@@ -65,7 +65,7 @@ export function renderRichText(text: string) {
           href={url}
           target="_blank"
           rel="noreferrer"
-          className="text-white hover:text-white/80 underline font-medium transition-colors cursor-pointer"
+          className="text-[var(--text-primary)] hover:opacity-80 underline font-medium transition-all cursor-pointer"
         >
           {linkText}
         </a>
@@ -77,7 +77,7 @@ export function renderRichText(text: string) {
     return boldParts.map((subPart, j) => {
       if (subPart.startsWith('**') && subPart.endsWith('**')) {
         return (
-          <strong key={`${i}-${j}`} className="font-semibold text-white">
+          <strong key={`${i}-${j}`} className="font-semibold text-[var(--text-primary)] transition-colors duration-300">
             {subPart.slice(2, -2)}
           </strong>
         );

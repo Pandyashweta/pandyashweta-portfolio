@@ -14,5 +14,5 @@ export function render(url: string) {
   );
 }
 
-// Export the projects data so prerender.js can dynamically inspect routes
-export { showcaseProjects, figmaProjects, codingProjects, liveProjects, researchProjects } from "./data/projects";
+// Dynamic routing exports for prerender script
+export { figmaProjects, researchProjects } from "./data/projects";

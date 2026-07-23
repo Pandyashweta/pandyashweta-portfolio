@@ -1,9 +1,8 @@
 import { useParams, useNavigate, useOutletContext } from "react-router-dom";
 import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
-import { codingProjects, figmaProjects, liveProjects, researchProjects, showcaseProjects } from "../../data/projects";
+import { figmaProjects, researchProjects } from "../../data/projects";
 import type { LayoutContext } from "../../components/layout/Layout";
-import IllustrationsView from "./components/IllustrationsView";
 import StandardView from "./components/StandardView";
 
 export default function ProjectDetailPage() {
@@ -18,11 +17,8 @@ export default function ProjectDetailPage() {
 
   // Find project in all lists
   const allProjects = [
-    ...codingProjects,
     ...figmaProjects,
-    ...liveProjects,
-    ...researchProjects,
-    ...showcaseProjects
+    ...researchProjects
   ];
 
   // Remove duplicates by ID
@@ -34,22 +30,17 @@ export default function ProjectDetailPage() {
 
   if (!project) {
     return (
-      <main className="w-full h-screen flex flex-col items-center justify-center text-center bg-[#080808] text-white">
+      <main className="w-full h-screen flex flex-col items-center justify-center text-center bg-[var(--bg-primary)] text-white transition-colors duration-300">
         <h1 className="text-2xl font-bold mb-4 font-sans">Project not found</h1>
         <button
-          onClick={() => navigate("/projects")}
+          onClick={() => navigate("/")}
           className="inline-flex items-center gap-1.5 bg-white text-black hover:bg-[#e5e5e5] active:scale-95 font-semibold font-sans text-xs px-5 py-2.5 rounded-full transition-all cursor-pointer"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
-          Back to Projects
+          Back to Home
         </button>
       </main>
     );
-  }
-
-  // Centered unified layout for illustrations only (no split columns partition, centered header)
-  if (project.id === "illustrations") {
-    return <IllustrationsView project={project} />;
   }
 
   return (
