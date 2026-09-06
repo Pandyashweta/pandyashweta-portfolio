@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef, type RefObject } from "react";
 import { Outlet } from "react-router-dom";
+import FloralBackground from "../common/FloralBackground";
+import CuteCat from "../common/CuteCat";
 
 export default function Layout() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -71,7 +73,9 @@ export default function Layout() {
   };
 
   return (
-    <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] font-sans antialiased selection:bg-rose-500/20 transition-colors duration-300">
+    <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] font-sans antialiased selection:bg-rose-500/20 transition-colors duration-300 relative">
+      <FloralBackground />
+      <CuteCat />
       <div className="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(ellipse_at_top_right,rgba(99,102,241,0.015),transparent_40%)]" />
       <div className="fixed inset-0 pointer-events-none z-40 bg-[radial-gradient(ellipse_at_bottom_left,rgba(236,72,153,0.015),transparent_40%)]" />
 
