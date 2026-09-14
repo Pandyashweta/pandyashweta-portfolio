@@ -1,9 +1,7 @@
 export default function ReachOut({
   showScrollUp = false,
-  showCertification = false,
 }: {
   showScrollUp?: boolean;
-  showCertification?: boolean;
 }) {
   const handleScrollToTop = () => {
     window.scrollTo({
@@ -13,74 +11,41 @@ export default function ReachOut({
   };
 
   return (
-    <div id="reach-out" className="scroll-mt-6">
-      <div className="flex justify-between items-center w-full">
-        <div className="flex flex-wrap gap-x-4 gap-y-2 text-[11px] font-mono text-[var(--text-muted)] items-center transition-colors duration-300">
-          <a
-            href="https://www.linkedin.com/in/pandyashweta/"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-[var(--text-primary)] transition-all border-b border-transparent hover:border-[var(--text-primary)] pb-0.5"
-          >
-            LinkedIn
-          </a>
-          <span>•</span>
-          <a
-            href="https://github.com/Pandyashweta"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-[var(--text-primary)] transition-all border-b border-transparent hover:border-[var(--text-primary)] pb-0.5"
-          >
-            GitHub
-          </a>
-          <span>•</span>
-          <a
-            href="https://www.figma.com/@pandyashweta"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-[var(--text-primary)] transition-all border-b border-transparent hover:border-[var(--text-primary)] pb-0.5"
-          >
-            Figma
-          </a>
-          <span>•</span>
-          <a
-            href="/shwetapandya-resume.pdf"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-[var(--text-primary)] transition-all border-b border-transparent hover:border-[var(--text-primary)] pb-0.5"
-          >
-            Resume
-          </a>
-          <span>•</span>
-          <a
-            href="mailto:pandyashweta.in@gmail.com"
-            className="hover:text-[var(--text-primary)] transition-all border-b border-transparent hover:border-[var(--text-primary)] pb-0.5"
-          >
-            Email
-          </a>
-          {showCertification && (
-            <>
-              <span>•</span>
-              <a
-                href="https://drive.google.com/drive/folders/1YKBPsnmHilmkRCv5kUm4bAo0i8hLy0lY?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-[var(--text-primary)] transition-all border-b border-transparent hover:border-[var(--text-primary)] pb-0.5"
-              >
-                Certification
-              </a>
-            </>
-          )}
-          <span>•</span>
-          <a
-            href="/projects"
-            className="hover:text-[var(--text-primary)] transition-all border-b border-transparent hover:border-[var(--text-primary)] pb-0.5"
-          >
-            Projects
-          </a>
-        </div>
+    <div id="reach-out" className="scroll-mt-6 space-y-6 pt-4">
+      {/* Centered nav links */}
+      <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 text-xs sm:text-sm font-mono text-[var(--text-muted)] font-medium transition-colors duration-300">
+        <a
+          href="https://www.linkedin.com/in/pandyashweta/"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:text-[var(--text-primary)] transition-all"
+        >
+          linkedin
+        </a>
+        <a
+          href="https://github.com/Pandyashweta"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:text-[var(--text-primary)] transition-all"
+        >
+          github
+        </a>
+        <a
+          href="mailto:pandyashweta.in@gmail.com"
+          className="hover:text-[var(--text-primary)] transition-all"
+        >
+          email
+        </a>
+        <a
+          href="/projects"
+          className="hover:text-[var(--text-primary)] transition-all"
+        >
+          projects
+        </a>
+      </div>
 
-        {showScrollUp && (
+      {showScrollUp && (
+        <div className="flex justify-center">
           <button
             onClick={handleScrollToTop}
             className="p-2 rounded-full border border-[var(--border-color)] hover:border-[var(--text-primary)] text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-all duration-300 cursor-pointer"
@@ -100,8 +65,8 @@ export default function ReachOut({
               />
             </svg>
           </button>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
