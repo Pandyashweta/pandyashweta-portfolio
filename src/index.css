@@ -12,24 +12,25 @@
   --font-sans: "Geist Sans", sans-serif;
   --font-display: "Geist Sans", sans-serif;
   --font-mono: "Geist Mono", monospace;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
 }
 
 :root {
-  /* Default: Black (Dark Mode) */
-  --bg-primary: #000000;
-  --bg-card: #080808;
-  --border-color: #161616;
-  --border-hover: #262626;
+  /* Default: Dark Mode (Slightly lighter than pure black) */
+  --bg-primary: #0d0e12;
+  --bg-card: #15161d;
+  --border-color: #20222b;
+  --border-hover: #2e313e;
   --text-primary: #ffffff;
-  --text-secondary: #888888;
-  --text-muted: #555555;
-  --marquee-fade: #000000;
+  --text-secondary: #9496a1;
+  --text-muted: #626575;
+  --marquee-fade: #0d0e12;
   --selection-bg: rgba(244, 63, 94, 0.2);
   --selection-text: #fca5a5;
-  --btn-bg: #1a1a1a;
-  --btn-hover: #242424;
+  --btn-bg: #1c1e26;
+  --btn-hover: #262934;
   --btn-text: #ffffff;
-  --btn-border: #2d2d2d;
+  --btn-border: #303342;
 }
 
 .theme-white {
