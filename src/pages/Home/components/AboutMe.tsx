@@ -11,7 +11,10 @@ export default function AboutMe() {
         <span className="font-semibold text-[var(--text-primary)]">data analysis</span>,{" "}
         <span className="font-semibold text-[var(--text-primary)]">UI/UX design</span>,{" "}
         <span className="font-semibold text-[var(--text-primary)]">backend technologies</span>, and{" "}
-        <span className="font-semibold text-[var(--text-primary)]">product database management</span>. I'm interested in{" "}
+        <span className="font-semibold text-[var(--text-primary)]">product database management</span>.
+      </p>
+      <p>
+        I'm interested in{" "}
         <span className="font-semibold text-[var(--text-primary)]">cybersecurity</span>,{" "}
         <span className="font-semibold text-[var(--text-primary)]">technology</span>,{" "}
         <span className="font-semibold text-[var(--text-primary)]">research</span>, and{" "}
