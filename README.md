@@ -1,5 +1,9 @@
-# Shweta Pandya - Portfolio
+:3
 
-A modern, responsive personal portfolio built with React 19, TypeScript, Vite, and Tailwind CSS. Showcases software development, UI/UX design, and research projects, along with credentials and work experience.
+hi, i'm **shweta pandya**. i code, and i just finished my master's degree in information technology at **the maharaja sayajirao university of baroda**.
 
-Live site: https://pandyashweta-portfolio.vercel.app/
+i like building websites, designing interfaces, and making things work a little better than they did before. right now i'm exploring new technologies and looking for my next opportunity.
+
+**what i work with:** python · java · javascript · react · next.js · node.js · tailwind css · figma
+
+[website](https://pandyashweta-portfolio.vercel.app/) · [linkedin](https://www.linkedin.com/in/pandyashweta/) · [email](mailto:pandyashweta.in@gmail.com) · [résumé](./shwetapandya-resume.pdf)
