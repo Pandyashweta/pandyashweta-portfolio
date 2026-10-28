@@ -4,10 +4,10 @@ import { Sun, Moon } from "lucide-react";
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<"dark" | "light">(() => {
     if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("theme");
+      const saved = localStorage.getItem("portfolio_theme_v2");
       if (saved === "light" || saved === "dark") return saved;
     }
-    return "dark"; // Default is dark (Black mode)
+    return "dark"; // Default is dark (Pure Black mode)
   });
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function ThemeToggle() {
     } else {
       root.classList.remove("theme-white");
     }
-    localStorage.setItem("theme", theme);
+    localStorage.setItem("portfolio_theme_v2", theme);
   }, [theme]);
 
   const toggleTheme = () => {
